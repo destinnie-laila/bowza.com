@@ -4,5 +4,6 @@ views = Blueprint('views', __name__)
 
 #creating route, where our users will go to
 @views.route('/')
+#this function will run everytime we activate this route
 def home():
     return "<h1>Test</h1>"
