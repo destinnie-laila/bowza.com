@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 #Blueprint allows us to have multiple views over different pages instead of confined to one page
 views = Blueprint('views', __name__)
 
@@ -6,4 +6,4 @@ views = Blueprint('views', __name__)
 @views.route('/')
 #this function will run everytime we activate this route
 def home():
-    return "<h1>Test</h1>"
+    return render_template("home.html")
