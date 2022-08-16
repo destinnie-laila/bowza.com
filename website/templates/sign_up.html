@@ -1,15 +1,17 @@
-{% extends "base.html" %}
+<!--Connecting to the html Doctype page via jinja with python-->
+{% extends "base.html" %} 
+
+<!--The blocks allow us to input our own data. The original block is placed in base.html
+using the jinja library it allows us to overwrite the parent block with our own data and use python-->
 {% block title %} Sign-Up {% endblock %}
 
 {% block content %}
 
-<h1>This is the Sign-Up page</h1>
-
-<!-- Creating a sign up form using the bootstrap classes
+<!-- Creating a sign up form using the bootstrap classes. Using a HTTP form method for collecting,and returning data
 --> 
 
 <form method="POST">
-    <h3 align="'centre">Sign Up</h3>
+    <h3 align="center">Sign Up</h3>
 
     <div class="form-group">
         
