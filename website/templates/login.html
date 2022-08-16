@@ -1,6 +1,56 @@
+<!--Connecting to the html Doctype page via jinja with python-->
 {% extends "base.html" %}
+<!--The blocks allow us to input our own data. The original block is placed in base.html
+using the jinja library it allows us to overwrite the parent block with our own data and use python-->
 {% block title %} Login {% endblock %}
+
 {% block content %}
-<h1>This is the Login page</h1>
-{{ text }}
+
+<form method="POST">
+    <h3 align="center">Login</h3>
+
+    <div class="form-group">
+        
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter Email"
+        />
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="firstName">First Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter First Name"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="password1">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password1"
+            name="password1"
+            placeholder="Enter Password"
+        />
+    </div>
+
+    </br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+
+
 {% endblock %}
