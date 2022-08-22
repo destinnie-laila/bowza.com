@@ -48,6 +48,9 @@
       </div>
     </nav>
 
+    <!--Usng Jinja we can craete a block template to use python syntax to take action 
+    if catergory conditions are met such as 'error' and 'success'-->
+
     {% with messages = get_flashed_messages(with_categories=true) %}
     {%if messages%}
       {%for category, message in messages%}
