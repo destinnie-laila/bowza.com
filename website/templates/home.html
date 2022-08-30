@@ -4,5 +4,10 @@
 using the jinja library it allows us to overwrite the parent block with our own data and use python-->
 {% block title %} Home {% endblock %}
 {% block content %}
-<h1>This is the home page</h1>
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Add a new note!</button>
+    </div>
+</form>
 {% endblock %}
