@@ -1,7 +1,7 @@
 from crypt import methods
 from unicodedata import category
 from urllib import request
-from flask import Blueprint, render_template, flash
+from flask import Blueprint, render_template, request, flash
 from flask_login import login_required, current_user
 from .models import Note
 from . import db
