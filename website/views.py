@@ -1,9 +1,10 @@
 from crypt import methods
 from unicodedata import category
 from urllib import request
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, flash
 from flask_login import login_required, current_user
 from .models import Note
+from . import db
 
 #Blueprint allows us to have multiple views over different pages instead of confined to one page
 views = Blueprint('views', __name__)
