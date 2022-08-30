@@ -29,11 +29,14 @@ def login():
     return render_template("login.html", user=current_user)
 
 
+
 @auth.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('auth.login'))
+
+
 
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
@@ -60,7 +63,7 @@ def sign_up():
                 password1, method='sha256'))
             db.session.add(new_user)
             db.session.commit()
-            login_user(new_user, remember=True)
+            login_user(user, remember=True)
             flash('Account created!', category='success')
             return redirect(url_for('views.home'))
 
