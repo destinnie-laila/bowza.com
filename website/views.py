@@ -23,6 +23,6 @@ def home():
             new_note = Note(data=note, user_id=current_user.id)
             db.sessions.add(new_note)
             db.sessions.commit()
-            flash('Note has been added!' category="success")
+            flash('Note has been added!', category="success")
             
     return render_template("home.html", user=current_user)
