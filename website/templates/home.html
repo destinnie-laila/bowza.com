@@ -4,10 +4,16 @@
 using the jinja library it allows us to overwrite the parent block with our own data and use python-->
 {% block title %} Home {% endblock %}
 {% block content %}
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">{{note.data}}</li>
+    {%endfor%}
+</ul>
 <form method="POST">
     <textarea name="note" id="note" class="form-control"></textarea>
     <div align="center">
-        <button type="submit" class="btn btn-primary">Add a new note!</button>
+        <button type="submit" class="btn btn-primary">ADD NOTE</button>
     </div>
 </form>
 {% endblock %}
