@@ -7,7 +7,12 @@ using the jinja library it allows us to overwrite the parent block with our own 
 <h1 align="center">Notes</h1>
 <ul class="list-group list-group-flush" id="notes">
     {% for note in user.notes %}
-    <li class="list-group-item">{{note.data}}</li>
+    <li class="list-group-item">{{note.data}}
+        <!--Button to delete existing note-->
+        <button type="button" class="close" onclick="">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
     {%endfor%}
 </ul>
 <form method="POST">
