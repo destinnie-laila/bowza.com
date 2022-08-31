@@ -8,8 +8,8 @@ using the jinja library it allows us to overwrite the parent block with our own 
 <ul class="list-group list-group-flush" id="notes">
     {% for note in user.notes %}
     <li class="list-group-item">{{note.data}}
-        <!--Button to delete existing note-->
-        <button type="button" class="close" onclick="">
+        <!--Button to delete existing note, we use javascript "onclick" to send request to back end to delete the note-->
+        <button type="button" class="close" onclick="deleteNote({{note.id}})">
             <span aria-hidden="true">&times;</span>
         </button>
     </li>
