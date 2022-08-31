@@ -32,7 +32,7 @@ def home():
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
     note = json.load(request.data)
-    noteID = note['note']
+    noteId = note['note']
     note = Note.query.get(noteId)
     if note:
         if note.user_id == current_user.id:
